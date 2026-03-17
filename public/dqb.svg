@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <title>Favicon DQB - Daniel Quirós Barroso</title>
+  <defs>
+
+    <!-- Degradado lineal para el código (efecto neón cian) -->
+    <linearGradient id="cyanNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#00A3B5"/>
+    </linearGradient>
+
+    <!-- Filtro de resplandor para darle aspecto tecnológico/eléctrico -->
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Grupo del Isotipo: Geometría calculada para el símbolo </ > -->
+  <g stroke="url(#cyanNeon)" stroke-width="48" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glowEffect)">
+
+    <!-- Corchete Izquierdo < -->
+    <path d="M 174 174 L 81 256 L 174 338"/>
+
+    <!-- Barra Diagonal / -->
+    <path d="M 273 140 L 239 372"/>
+
+    <!-- Corchete Derecho > -->
+    <path d="M 338 174 L 431 256 L 338 338"/>
+
+  </g>
+</svg>
