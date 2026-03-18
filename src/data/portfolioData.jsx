@@ -5,32 +5,37 @@ export const skills = {
   frontend: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
   backend: ["Python", "Node.js", "MySQL", "PostgreSQL", "Supabase"],
   tools: ["GitHub & Git", "Vite", "Astro", "Prompt Engineering", "IA Agents"],
-  soft: ["Resolución de problemas", "Adaptabilidad", "Trabajo en equipo", "Lógica secuencial"],
+  soft: [
+    "Resolución de problemas",
+    "Adaptabilidad",
+    "Trabajo en equipo",
+    "Lógica secuencial",
+  ],
 };
 
 export const experiences = [
   {
-    role: "Técnico de Mantenimiento",
+    role: "Técnico electromecánico",
     company: "Conesa Group",
     period: "2025 - Actualidad",
     description:
-      "Mantenimiento y optimización de procesos operativos en planta.",
+      "Mantenimiento preventivo y correctivo de maquinaria industrial. Reparación de averías, optimización de procesos y mejoras en la línea de producción.",
     icon: <Wrench size={20} />,
   },
   {
-    role: "Maquinista de llenado",
+    role: "Técnico de Mantenimiento - Maquinista",
     company: "Icap (Laundry Care)",
     period: "2024 - 2025",
     description:
-      "Análisis y corrección de fallos e implementación de mejoras en la línea de producción.",
+      "Análisis y corrección de fallos, mantenimiento preventivo y correctivo en la línea de producción. Optimización de procesos, control y gestión de la materia prima y producto terminado.",
     icon: <Cpu size={20} />,
   },
   {
-    role: "Técnico de mantenimiento",
+    role: "Técnico electromecánico",
     company: "GBFoods",
     period: "2023",
     description:
-      "Control de la línea e implementación de mejoras técnicas para la eficiencia operativa. Optimización mediante lógica secuencial.",
+      "Mantenimiento preventivo y correctivo, y optimización de procesos de maquinaria industrial.",
     icon: <Wrench size={20} />,
   },
   {
@@ -38,7 +43,7 @@ export const experiences = [
     company: "Ibermática",
     period: "Mar 2019 - Jun 2019",
     description:
-      "Desarrollo de funciones básicas con HTML/CSS, JavaScript y SQL. Análisis de fallos e implementación de mejoras.",
+      "Desarrollo de funciones básicas con HTML/CSS, JavaScript y SQL. Gestión y realización de consultas a bases de datos relacionales (SQL) para la visualización de datos. Análisis de documentación técnica e integración en flujos de trabajo de equipo de desarrollo de software.",
     icon: <Code2 size={20} />,
   },
 ];
