@@ -101,12 +101,12 @@ export const certificates = [
 
 export const projects = [
   {
-    title: "Proyecto Personal en Desarrollo",
+    title: "Wallet.ia",
     description:
-      "Actualmente estoy diseñando y desarrollando una aplicación Fullstack. Estaré integrando tecnologías como React, Node.js y agentes de IA. Pronto publicaré aquí el código fuente y la demo interactiva.",
-    tags: ["React", "Node.js", "IA", "Próximamente"],
-    github: "#",
-    demo: "#",
-    status: "En construcción",
-  },
+      "Aplicación PWA de gestión financiera para parejas. Permite el control de gastos personales y compartidos con sincronización en tiempo real y autenticación segura.",
+    tags: ["React", "Vite", "Supabase", "PWA", "Tailwind CSS"],
+    github: "https://github.com/DaniQB99/wallet.ia",
+    demo: "https://wallet-ia-k1sc.vercel.app/",
+    status: "En proceso",
+  }
 ];

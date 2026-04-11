@@ -17,7 +17,12 @@ const Projects = () => {
         {projects.map((proj, idx) => (
           <div
             key={idx}
-            className="bg-white dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-cyan-500/50 dark:hover:border-cyan-500/30 transition-all group hover:-translate-y-1 shadow-sm dark:shadow-none"
+            onClick={() => {
+              if (proj.demo !== "#") window.open(proj.demo, "_blank");
+            }}
+            className={`bg-white dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-cyan-500/50 dark:hover:border-cyan-500/30 transition-all group hover:-translate-y-1 shadow-sm dark:shadow-none ${
+              proj.demo !== "#" ? "cursor-pointer" : ""
+            }`}
           >
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
@@ -43,12 +48,37 @@ const Projects = () => {
               ))}
             </div>
             <div className="flex gap-4 border-t border-slate-100 dark:border-slate-800/50 pt-4 mt-auto">
-              <span className="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-600 cursor-not-allowed">
-                <Github size={18} /> Código (Pronto)
-              </span>
-              <span className="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-600 cursor-not-allowed">
-                <ExternalLink size={18} /> Demo (Pronto)
-              </span>
+              {proj.github !== "#" ? (
+                <a
+                  href={proj.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                >
+                  <Github size={18} /> Código
+                </a>
+              ) : (
+                <span className="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-600 cursor-not-allowed">
+                  <Github size={18} /> Código (Pronto)
+                </span>
+              )}
+
+              {proj.demo !== "#" ? (
+                <a
+                  href={proj.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                >
+                  <ExternalLink size={18} /> Demo
+                </a>
+              ) : (
+                <span className="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-600 cursor-not-allowed">
+                  <ExternalLink size={18} /> Demo (Pronto)
+                </span>
+              )}
             </div>
           </div>
         ))}
