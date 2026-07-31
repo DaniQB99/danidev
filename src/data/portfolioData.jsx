@@ -106,7 +106,7 @@ export const projects = [
       "Aplicación PWA de gestión financiera para parejas. Permite el control de gastos personales y compartidos con sincronización en tiempo real y autenticación segura.",
     tags: ["React", "Vite", "Supabase", "PWA", "Tailwind CSS"],
     github: "https://github.com/DaniQB99/wallet.ia",
-    demo: "https://wallet-ia-k1sc.vercel.app/",
+    demo: "https://wallet-ia-couple.vercel.app/",
     status: "En proceso",
   }
 ];
