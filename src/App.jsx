@@ -9,28 +9,14 @@ import Footer from "./components/layout/Footer";
 import MobileNav from "./components/layout/MobileNav";
 
 export default function App() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  // Initial animation
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  // Theme logic
-  useEffect(() => {
-    // Check user preference or system preference on load
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window === "undefined") return true;
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)",
     ).matches;
-
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
-    }
-  }, []);
+    return savedTheme === "dark" || (!savedTheme && prefersDark);
+  });
 
   useEffect(() => {
     if (isDarkMode) {

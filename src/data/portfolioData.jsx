@@ -2,7 +2,7 @@ import React from "react";
 import { Wrench, Cpu, Code2 } from "lucide-react";
 
 export const skills = {
-  frontend: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
+  frontend: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
   backend: ["Python", "Node.js", "MySQL", "PostgreSQL", "Supabase"],
   tools: ["GitHub & Git", "Vite", "Astro", "Prompt Engineering", "IA Agents"],
   soft: [
@@ -101,12 +101,32 @@ export const certificates = [
 
 export const projects = [
   {
-    title: "Wallet.ia",
+    title: "Pacho",
+    subtitle: "Personal & Shared Finance Companion",
     description:
-      "Aplicación PWA de gestión financiera para parejas. Permite el control de gastos personales y compartidos con sincronización en tiempo real y autenticación segura.",
-    tags: ["React", "Vite", "Supabase", "PWA", "Tailwind CSS"],
-    github: "https://github.com/DaniQB99/wallet.ia",
-    demo: "https://wallet-ia-couple.vercel.app/",
-    status: "En proceso",
-  }
+      "Aplicación Web Progresiva (PWA) de finanzas personales y compartidas para parejas con arquitectura dual: privacidad individual blindada y sincronización de gastos comunes en tiempo real.",
+    tags: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Supabase Realtime",
+      "PostgreSQL 15",
+      "Feature-Sliced Design (FSD)",
+      "PWA",
+      "Framer Motion",
+      "Tailwind CSS",
+    ],
+    github: "https://github.com/DaniQB99/pacho-app",
+    demo: "https://pacho-showcase.vercel.app/",
+    appUrl: "https://pacho-app.vercel.app/auth",
+    status: "Producción",
+    featured: true,
+    badge: "Proyecto Estrella",
+    image: "/pacho/pacho-banner.jpg",
+    highlights: [
+      "Arquitectura dual: libro diario 100% privado + sincronización en tiempo real de gastos compartidos.",
+      "Clean Architecture & Feature-Sliced Design (FSD) para desacoplamiento y escalabilidad.",
+      "Optimización offline-first con soporte PWA completo y animaciones fluidas con Framer Motion.",
+    ],
+  },
 ];
